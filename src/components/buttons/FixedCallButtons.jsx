@@ -9,7 +9,7 @@ export default function FixedCallButtons() {
       <div className="flex justify-between w-full items-center max-w-7xl gap-2">
         <button
           onClick={dialPhone}
-          className="rounded- flex items-center justify-center shadow-lg h-14 w-14 border-black/10 border bg-primary pointer-events-auto"
+          className="rounded-md border-y-4 border-primary flex items-center justify-center shadow-lg h-14 w-14 border-black/10 border bg-primary pointer-events-auto"
         >
           <Image
             quality={100}
@@ -21,7 +21,7 @@ export default function FixedCallButtons() {
         </button>
         <button
           onClick={sendMessage}
-          className="rounded- flex items-center justify-center shadow-lg h-14 w-14 bg-green-400 border border-green-200 pointer-events-auto"
+          className="rounded-md border-y-4 border-primary flex items-center justify-center shadow-lg h-14 w-14 bg-green-400 border pointer-events-auto"
         >
           <Image
             quality={100}
