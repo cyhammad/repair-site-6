@@ -15,8 +15,17 @@ const OneService = ({
   return (
     <div
       className={cn(
-        "w-full flex flex-col gap-3 border-y-8 text-center text-balance border-x rounded-2xl border-primary relative",
-        `bg-${bgColor}`
+        "w-full flex flex-col gap-3 border-y-8 text-center text-balance border-x rounded-2xl relative",
+        `bg-${bgColor}`,
+        company === "Lg"
+          ? "border-lgPrimary"
+          : company === "Samsung"
+          ? "border-samsungPrimary"
+          : company === "Siemens"
+          ? "border-siemensPrimary"
+          : company === "Bosch"
+          ? "border-boschPrimary"
+          : "border-primary"
       )}
       id={slug}
     >
@@ -36,7 +45,7 @@ const OneService = ({
         className="px-5 pb-10 absolute bottom-0 w-full justify-center"
       />
       <h3 className="text-xl font-semibold px-5">Common Problems:</h3>
-      <ul className="list-disc list-inside">
+      <ul className="list-disc px-7 text-start list-inside">
         {commonProblems.map((problem, index) => (
           <li key={index}>{problem}</li>
         ))}

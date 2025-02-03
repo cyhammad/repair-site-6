@@ -1,17 +1,46 @@
 import Image from "next/image";
 import CallAndWhatsappButton from "../buttons/CallAndWhatsappButton";
+import { cn } from "@/lib/utils";
 
-const MainBanner = () => {
+const MainBanner = ({ company = "" }) => {
   return (
     <div className="flex flex-col items-center justify-center px-5">
       <div className="grid md:grid-cols-2 w-full max-w-7xl gap-5 py-10 md:min-h-[35rem]">
         <div className="flex flex-col w-full h-full gap-5 justify-center">
-          <span className="text-primary md:text-xl font-bold">
+          <span
+            className={cn(
+              "md:text-xl font-bold",
+              company === "Lg"
+                ? "text-lgPrimary"
+                : company === "Samsung"
+                ? "text-samsungPrimary"
+                : company === "Siemens"
+                ? "text-siemensPrimary"
+                : company === "Bosch"
+                ? "text-boschPrimary"
+                : "text-primary"
+            )}
+          >
             Home appliance repair services
           </span>
           <h1 className="md:text-5xl text-3xl font-bold">
             We've Got You Covered, <br />
-            Plus <span className="text-primary">So Much More</span>
+            Plus{" "}
+            <span
+              className={
+                company === "Lg"
+                  ? "text-lgPrimary"
+                  : company === "Samsung"
+                  ? "text-samsungPrimary"
+                  : company === "Siemens"
+                  ? "text-siemensPrimary"
+                  : company === "Bosch"
+                  ? "text-boschPrimary"
+                  : "text-primary"
+              }
+            >
+              So Much More
+            </span>
           </h1>
           <h2 className="md:text-lg text-black/60">
             Reliable Home Appliances Repairs Because You Deserve <br />
