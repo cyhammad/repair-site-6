@@ -1,7 +1,7 @@
 
 export const companyName = "Repair Site 6";
 
-export const phoneNumber = "+971547445326";
+export const phoneNumber = "+971551997030";
 
 export const sendMessage = () => {
   const message = "Hi,I need Appliance Repair Service Appointment.";
