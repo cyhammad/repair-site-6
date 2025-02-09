@@ -1,5 +1,5 @@
 
-export const companyName = "Repair Site 6";
+export const companyName = "Service Center Emirates";
 
 export const phoneNumber = "+971551997030";
 
